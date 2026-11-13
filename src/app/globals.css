@@ -1,0 +1,264 @@
+@import "tailwindcss";
+
+/* ---------------------------------------------------------------------------
+   Al-Saif Print & Pack — design tokens
+   Gold (#C99B2B) is decorative on light backgrounds (2.6:1). Use gold-ink for
+   gold-coloured text on light surfaces; bright gold is fine on navy (6.4:1).
+--------------------------------------------------------------------------- */
+@theme {
+  --font-sans: var(--font-jakarta), ui-sans-serif, system-ui, "Segoe UI", Roboto, Arial, sans-serif;
+
+  --color-royal-50: #eff0f9;
+  --color-royal-100: #dfe0f2;
+  --color-royal-200: #bfc1e4;
+  --color-royal-500: #4f53ab;
+  --color-royal-600: #3f4294;
+  --color-royal-700: #33367b;
+  --color-navy-700: #232a55;
+  --color-navy-800: #1c2247;
+  --color-navy-900: #171d3d;
+  --color-navy-950: #10142c;
+  --color-gold-200: #f1e2bb;
+  --color-gold-300: #e0b954;
+  --color-gold-500: #c99b2b;
+  --color-gold-600: #b08420;
+  --color-gold-ink: #8a6516;
+  --color-paper: #f7f8fb;
+  --color-ink: #202638;
+  --color-muted: #5f6a7e;
+  --color-line: #e3e6ef;
+  --color-whatsapp: #0f7a41;
+  --color-whatsapp-dark: #0b6235;
+
+  --shadow-card: 0 1px 2px rgb(23 29 61 / 0.04), 0 8px 24px -12px rgb(23 29 61 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(23 29 61 / 0.05), 0 18px 40px -18px rgb(23 29 61 / 0.25);
+
+  --animate-fade-up: fade-up 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+
+  @keyframes fade-up {
+    from {
+      opacity: 0;
+      transform: translateY(14px);
+    }
+    to {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5.5rem;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background: #ffffff;
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: var(--color-gold-200);
+    color: var(--color-navy-900);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-gold-500);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    letter-spacing: -0.02em;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+@layer components {
+  .container-site {
+    width: 100%;
+    max-width: 80rem;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 640px) {
+    .container-site {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--color-gold-ink);
+  }
+  .eyebrow::before {
+    content: "";
+    width: 2rem;
+    height: 2px;
+    background: var(--color-gold-500);
+  }
+  .eyebrow-on-dark {
+    color: var(--color-gold-300);
+  }
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    min-height: 3rem;
+    padding: 0.75rem 1.375rem;
+    border-radius: 0.625rem;
+    font-weight: 700;
+    font-size: 0.9375rem;
+    line-height: 1.2;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease,
+      transform 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+  .btn:active {
+    transform: translateY(1px);
+  }
+  .btn-gold {
+    background: var(--color-gold-500);
+    color: var(--color-navy-900);
+  }
+  .btn-gold:hover {
+    background: var(--color-gold-300);
+  }
+  .btn-royal {
+    background: var(--color-royal-600);
+    color: #fff;
+  }
+  .btn-royal:hover {
+    background: var(--color-royal-700);
+  }
+  .btn-outline-light {
+    border: 1.5px solid rgb(255 255 255 / 0.35);
+    color: #fff;
+  }
+  .btn-outline-light:hover {
+    border-color: #fff;
+    background: rgb(255 255 255 / 0.08);
+  }
+  .btn-outline {
+    border: 1.5px solid var(--color-line);
+    color: var(--color-navy-900);
+    background: #fff;
+  }
+  .btn-outline:hover {
+    border-color: var(--color-royal-600);
+    color: var(--color-royal-600);
+  }
+  .btn-whatsapp {
+    background: var(--color-whatsapp);
+    color: #fff;
+  }
+  .btn-whatsapp:hover {
+    background: var(--color-whatsapp-dark);
+  }
+
+  .field-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-navy-900);
+    margin-bottom: 0.375rem;
+  }
+  .field {
+    width: 100%;
+    min-height: 3rem;
+    border-radius: 0.625rem;
+    border: 1.5px solid #cfd4e1;
+    background: #fff;
+    padding: 0.7rem 0.9rem;
+    font-size: 1rem;
+    color: var(--color-ink);
+    transition:
+      border-color 0.15s ease,
+      box-shadow 0.15s ease;
+  }
+  .field::placeholder {
+    color: #8a93a6;
+  }
+  .field:hover {
+    border-color: #aeb5c8;
+  }
+  .field:focus {
+    outline: none;
+    border-color: var(--color-royal-600);
+    box-shadow: 0 0 0 3px rgb(63 66 148 / 0.18);
+  }
+  .field[aria-invalid="true"] {
+    border-color: #b42318;
+  }
+  .field[aria-invalid="true"]:focus {
+    box-shadow: 0 0 0 3px rgb(180 35 24 / 0.15);
+  }
+  select.field {
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%23657084' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    padding-right: 2.5rem;
+  }
+
+  /* Subtle print "registration" dot grid used as section texture */
+  .dot-grid {
+    background-image: radial-gradient(rgb(63 66 148 / 0.12) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+  .dot-grid-dark {
+    background-image: radial-gradient(rgb(255 255 255 / 0.07) 1px, transparent 1px);
+    background-size: 22px 22px;
+  }
+}
+
+/* Scroll reveal — content stays visible without JavaScript */
+.js [data-reveal] {
+  opacity: 0;
+  transform: translateY(16px);
+  transition:
+    opacity 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+    transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+.js [data-reveal].is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .js [data-reveal] {
+    opacity: 1;
+    transform: none;
+  }
+}

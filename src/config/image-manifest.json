@@ -1,0 +1,78 @@
+{
+  "colour-swatch-fan-deck": {
+    "width": 1600,
+    "height": 1069,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1600
+    ]
+  },
+  "custom-printed-product-boxes": {
+    "width": 1600,
+    "height": 1200,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1600
+    ]
+  },
+  "heidelberg-gto-offset-press": {
+    "width": 1600,
+    "height": 2400,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1600
+    ]
+  },
+  "hero-offset-press-in-motion": {
+    "width": 2400,
+    "height": 1602,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1920
+    ]
+  },
+  "offset-press-ink-rollers": {
+    "width": 1400,
+    "height": 2100,
+    "widths": [
+      480,
+      768,
+      1080,
+      1400
+    ]
+  },
+  "pharmaceutical-carton-packaging": {
+    "width": 1600,
+    "height": 1067,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1600
+    ]
+  },
+  "prepress-colour-control-loupe": {
+    "width": 1800,
+    "height": 2707,
+    "widths": [
+      480,
+      768,
+      1080,
+      1440,
+      1800
+    ]
+  }
+}
