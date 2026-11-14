@@ -31,7 +31,7 @@ export function Industries() {
       <div className="container-site">
         <SectionHeading
           id="industries-title"
-          eyebrow="Industries"
+          eyebrow="Industries We Serve"
           title="Printing Solutions for Every Industry"
           intro="We work with businesses that need dependable, consistent print. Sectors marked “Listed clients” are those where our company profile names existing customers; the others are sectors our capabilities are suited to."
         />

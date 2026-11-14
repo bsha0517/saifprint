@@ -94,8 +94,8 @@ export function Footer() {
             © <span data-year>{year}</span> {business.name}. All rights reserved.
           </p>
           <p className="max-w-xl text-[#aeb4cf] sm:text-right">
-            Photography: representative stock images from Unsplash — they do not depict Al-Saif&apos;s premises,
-            staff, machinery or customer work.
+            Some photographs are representative images (including stock photography from Unsplash) and may not
+            depict Al-Saif&apos;s own premises, staff, machinery or customer work.
           </p>
         </div>
       </div>

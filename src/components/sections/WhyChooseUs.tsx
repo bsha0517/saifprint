@@ -10,7 +10,7 @@ export function WhyChooseUs() {
         <div className="grid items-end gap-10 lg:grid-cols-[1.1fr_1fr]">
           <SectionHeading
             id="why-title"
-            eyebrow="Why Al-Saif"
+            eyebrow="Why Choose Us"
             title="Why Businesses Choose Us"
             intro="A production partner that takes responsibility for the whole job — and keeps you informed along the way."
           />

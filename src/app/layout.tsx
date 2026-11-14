@@ -10,9 +10,9 @@ const jakarta = Plus_Jakarta_Sans({
   display: "swap",
 });
 
-const title = "Al-Saif Print & Pack | Printing & Packaging Solutions Lahore";
+const title = "Al-Saif Print & Pack | Printing & Packaging Lahore";
 const description =
-  "Al-Saif Print & Pack offers offset printing, custom packaging, commercial printing and professional print finishing solutions in Lahore, Pakistan.";
+  "Al-Saif Print & Pack offers offset printing, custom packaging, pharmaceutical packaging printing and premium finishing services in Lahore, Pakistan.";
 
 export const metadata: Metadata = {
   metadataBase,

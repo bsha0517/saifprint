@@ -32,25 +32,20 @@
       1600
     ]
   },
-  "hero-offset-press-in-motion": {
-    "width": 2400,
-    "height": 1602,
+  "heidelberg-press-feeder-offset-printing": {
+    "width": 640,
+    "height": 480,
     "widths": [
       480,
-      768,
-      1080,
-      1440,
-      1920
+      640
     ]
   },
-  "offset-press-ink-rollers": {
-    "width": 1400,
-    "height": 2100,
+  "heidelberg-sheetfed-offset-press": {
+    "width": 554,
+    "height": 554,
     "widths": [
       480,
-      768,
-      1080,
-      1400
+      554
     ]
   },
   "pharmaceutical-carton-packaging": {

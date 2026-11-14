@@ -16,7 +16,7 @@ export function Capabilities() {
           <div>
             <SectionHeading
               id="capabilities-title"
-              eyebrow="Our Capabilities"
+              eyebrow="Printing & Finishing Capabilities"
               title="Technology Behind Every Print"
               intro="Our company profile identifies a range of printing and finishing equipment that lets us take jobs from press to finished product in-house."
               dark

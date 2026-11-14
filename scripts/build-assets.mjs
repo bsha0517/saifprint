@@ -113,7 +113,7 @@ await writeFile(path.join(publicDir, "favicon.ico"), Buffer.concat([ico, png32])
 // Open Graph / social sharing image (1200×630)
 const W = 1200;
 const H = 630;
-const photo = await sharp(path.join(photosDir, "hero-offset-press-in-motion.jpg"))
+const photo = await sharp(path.join(root, "assets", "social", "og-background-offset-press.jpg"))
   .resize(560, H, { fit: "cover", position: "centre" })
   .toBuffer();
 const card = await sharp(lockup).resize({ width: 520 }).png().toBuffer();

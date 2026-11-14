@@ -1,5 +1,5 @@
 import { ArrowRight, Check } from "lucide-react";
-import { finishingOptions } from "@/config/site";
+import { finishingTitles } from "@/config/site";
 import { Photo } from "@/components/ui/Photo";
 
 export function Hero() {
@@ -26,7 +26,8 @@ export function Hero() {
           </h1>
           <p className="mt-6 max-w-xl text-lg leading-relaxed text-[#c9cde0]">
             From precision offset printing to custom packaging and premium finishing, Al-Saif Print &amp;
-            Pack helps businesses bring their ideas to life with professional printing solutions.
+            Pack helps businesses in Lahore and across Pakistan bring their ideas to life with professional
+            printing solutions.
           </p>
           <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a href="#quote" className="btn btn-gold">
@@ -58,8 +59,8 @@ export function Hero() {
           />
           <div className="relative overflow-hidden rounded-2xl shadow-[0_30px_80px_-30px_rgb(0_0_0/0.6)] ring-1 ring-white/10">
             <Photo
-              name="hero-offset-press-in-motion"
-              alt="Printed sheets running at speed through an industrial printing press (representative stock photo)"
+              name="heidelberg-sheetfed-offset-press"
+              alt="Heidelberg sheet-fed offset printing press"
               sizes="(min-width: 1280px) 600px, (min-width: 1024px) 46vw, 92vw"
               priority
               className="aspect-[4/3] h-full w-full object-cover"
@@ -71,7 +72,7 @@ export function Hero() {
             <div className="absolute inset-x-0 bottom-0 hidden p-5 min-[420px]:block sm:p-6">
               <p className="text-xs font-bold uppercase tracking-[0.18em] text-gold-300">Finishing options</p>
               <ul className="mt-3 flex flex-wrap gap-2" aria-label="Available finishing options">
-                {finishingOptions.slice(0, 5).map((f) => (
+                {finishingTitles.slice(0, 5).map((f) => (
                   <li
                     key={f}
                     className="rounded-full border border-white/20 bg-white/10 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm"

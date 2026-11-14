@@ -1,19 +1,33 @@
 # Image credits & licensing
 
-All photographs are **representative stock images**. They do **not** show Al-Saif Print & Pack's
-premises, staff, machinery or customer work, and the website says so (footer note, image alt text,
-and a caption under the press photo in "Our Capabilities").
+Photographs are either **owner-supplied** or **representative stock images**. Stock images do **not**
+show Al-Saif Print & Pack's premises, staff, machinery or customer work; the website says so (footer
+note, alt text on stock images, and a caption under the press photo in "Our Capabilities").
+
+## Owner-supplied images
+
+Supplied by the owner on 15 November 2026, who confirmed permission to use them. They are not
+described on the site as Al-Saif's own equipment, because that has not been confirmed.
+
+| File | Original upload | Used in |
+| --- | --- | --- |
+| `assets/photos/heidelberg-sheetfed-offset-press.jpg` (554×554) | `Finishing_option.jpeg` | Hero image with the "Finishing options" overlay |
+| `assets/photos/heidelberg-press-feeder-offset-printing.jpg` (640×480) | `Offset Printing.jpeg` | Services — Offset Printing card |
+
+Both originals are small; higher-resolution versions (≥ 1600 px wide) would look sharper on high-density
+screens. Drop them into `assets/photos/` under the same names and run `npm run assets`.
+
+## Stock images
 
 All images below were downloaded from Unsplash (free, non-"Unsplash+" images) on 13 November 2026 and
 are used under the [Unsplash License](https://unsplash.com/license): free for commercial use, no
 attribution required (credited here as good practice). The licence does not allow implying that the
 photographer or anyone shown endorses the business.
 
-| File (assets/photos) | Used in | Photographer | Source |
+| File | Used in | Photographer | Source |
 | --- | --- | --- | --- |
-| `hero-offset-press-in-motion.jpg` | Hero, social-share image | Bank Phrom | https://unsplash.com/photos/printing-machine-Tzm3Oyu_6sk |
+| `assets/social/og-background-offset-press.jpg` | Social-share image background | Bank Phrom | https://unsplash.com/photos/printing-machine-Tzm3Oyu_6sk |
 | `prepress-colour-control-loupe.jpg` | About | Immo Wegmann | https://unsplash.com/photos/linen-tester-on-color-calibration-chart-eWuUwZWuWvE |
-| `offset-press-ink-rollers.jpg` | Services — Offset Printing | Aleksandr Galichkin | https://unsplash.com/photos/industrial-printing-press-with-purple-ink-rollers-QRykXu51r_0 |
 | `custom-printed-product-boxes.jpg` | Services — Custom Packaging | Tarah Dane | https://unsplash.com/photos/green-and-pink-cardboard-boxes-xudcDDtjY2c |
 | `pharmaceutical-carton-packaging.jpg` | Services — Pharmaceutical Packaging | Melany @ tuinfosalud.com | https://unsplash.com/photos/white-and-red-medication-pill-blister-pack-F6clvre8fGg |
 | `heidelberg-gto-offset-press.jpg` | Our Capabilities | shamin kmrzmn | https://unsplash.com/photos/a-large-machine-in-a-large-room-XJJ5oAZmnlI |

@@ -25,7 +25,7 @@ export function About() {
 
         <div className="pt-6 lg:pt-0">
           <div data-reveal>
-            <p className="eyebrow">About Us</p>
+            <p className="eyebrow">About Al-Saif Print &amp; Pack</p>
             <h2
               id="about-title"
               className="mt-4 text-3xl font-extrabold leading-[1.15] text-navy-900 sm:text-4xl lg:text-[2.75rem]"
@@ -34,7 +34,7 @@ export function About() {
             </h2>
             <div className="mt-6 space-y-4 text-lg leading-relaxed text-muted">
               <p>
-                At Al-Saif Print &amp; Pack, we bring together printing expertise, creative design support and
+                At Al-Saif Print &amp; Pack, a printing and packaging company in Lahore, we bring together printing expertise, creative design support and
                 finishing capabilities to deliver practical solutions for businesses across different industries.
               </p>
               <p>

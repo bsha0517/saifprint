@@ -97,6 +97,49 @@ create/verify a Google Business Profile with the same name, address and phone nu
 > Nothing has been deployed, and no domain, hosting or paid service has been set up. These steps need the
 > owner's approval and accounts.
 
+## Go-live checklist — alsaifprintpack.pk
+
+Current state (15 Nov 2026): the Vercel project `saifprint` already has **alsaifprintpack.pk** (primary)
+and **www.alsaifprintpack.pk** (308 redirect → apex) attached, and Production uses
+`NEXT_PUBLIC_SITE_URL=https://alsaifprintpack.pk` with `NEXT_PUBLIC_ALLOW_INDEXING=false`.
+The domain does not resolve yet (no DNS delegation at PKNIC), so the site is intentionally non-indexable.
+
+1. **Register / activate the domain** at PKNIC (or a PKNIC reseller) if not done yet.
+2. **Add these DNS records** at the domain's DNS provider — exactly as requested by Vercel:
+
+   | Host | Type | Value |
+   | --- | --- | --- |
+   | `alsaifprintpack.pk` (apex, `@`) | A | `216.198.79.1` |
+   | `alsaifprintpack.pk` (apex, `@`) | A | `64.29.17.1` |
+   | `www` | CNAME | `5f7aef6cf4cce936.vercel-dns-017.com.` |
+
+   (Vercel also accepts its older generic values `76.76.21.21` / `cname.vercel-dns.com`.) Do not change
+   nameservers unless you intend to move DNS to Vercel.
+3. Wait until Vercel → Settings → Domains shows both domains as **Valid Configuration** and
+   `https://alsaifprintpack.pk` loads with a valid certificate.
+4. Set `NEXT_PUBLIC_ALLOW_INDEXING=true` (Production) and **Redeploy**. robots.txt then allows crawling and lists
+   `https://alsaifprintpack.pk/sitemap.xml`.
+5. Optional, once the domain works: redirect the temporary Vercel URL by adding to `vercel.json`
+   (keep the existing `framework` and `headers` entries):
+
+   ```json
+   "redirects": [
+     {
+       "source": "/:path*",
+       "has": [{ "type": "host", "value": "saifprint.vercel.app" }],
+       "destination": "https://alsaifprintpack.pk/:path*",
+       "permanent": true
+     }
+   ]
+   ```
+
+   Until then, `saifprint.vercel.app` is protected from indexing by an `X-Robots-Tag: noindex` header
+   (in `vercel.json`) regardless of the indexing setting.
+6. **Google Search Console:** add a *Domain property* for `alsaifprintpack.pk`, verify it with the TXT record
+   Google provides, submit `https://alsaifprintpack.pk/sitemap.xml`, then use URL Inspection on the homepage.
+7. **Google Business Profile:** create or claim the profile using exactly the name, address and phone shown on
+   the site (*Al-Saif Print & Pack*, the Band Road address, +92 300 6591090) and add the website URL.
+
 ## Brand assets
 
 The official logo supplied by Al-Saif (`AL-SAIF Print & Pack Logo.png`, copied to

@@ -96,11 +96,11 @@ export const services: Service[] = [
     id: "offset-printing",
     title: "Offset Printing",
     description:
-      "Commercial offset printing for business documents, marketing materials and product-related print, prepared with care from artwork to press.",
+      "Commercial offset printing in Lahore for business documents, marketing materials and product-related print, prepared with care from artwork to press.",
     icon: "printer",
     image: {
-      src: "offset-press-ink-rollers",
-      alt: "Ink rollers on a sheet-fed offset printing press (representative stock photo)",
+      src: "heidelberg-press-feeder-offset-printing",
+      alt: "Paper stack loaded in the feeder of a Heidelberg sheet-fed offset printing press",
     },
   },
   {
@@ -180,17 +180,34 @@ export const services: Service[] = [
 ];
 
 export const finishingOptions = [
-  "Lamination",
-  "Spot UV",
-  "UV finishing",
-  "Embossing",
-  "Die cutting",
-  "Pasting",
-  "Panni printing",
+  { title: "Lamination", description: "Protective gloss or matt film for durability and a refined feel." },
+  { title: "Spot UV", description: "Selective high-gloss highlights on logos, text or graphics." },
+  { title: "UV finishing", description: "UV coating that adds shine and surface protection." },
+  { title: "Embossing", description: "Raised, tactile detail that adds depth to a design." },
+  { title: "Die cutting", description: "Precise cutting and creasing for cartons and custom shapes." },
+  { title: "Pasting", description: "Carton gluing and assembly ready for packing." },
+  { title: "Panni printing", description: "Specialised finishing — ask us whether it suits your job." },
+  {
+    title: "Holography",
+    description:
+      "Holographic finishing solutions that enhance the visual appeal of printed packaging with distinctive decorative effects.",
+  },
+  {
+    title: "Drip-Off",
+    description:
+      "Specialized print finishing that combines contrasting gloss and matte effects to create texture, depth, and a distinctive visual appearance.",
+  },
 ] as const;
 
+export const finishingTitles = finishingOptions.map((f) => f.title);
+
 /** Options for the quotation form's "Service Required" field. */
-export const quoteServiceOptions = [...services.map((s) => s.title), "Other / Not sure yet"];
+export const quoteServiceOptions = [
+  ...services.map((s) => s.title),
+  "Holography",
+  "Drip-Off",
+  "Other / Not sure yet",
+];
 
 export interface Industry {
   id: string;
@@ -304,6 +321,14 @@ export const clients = [
   "Trend Pharma",
   "Cure Inn Pharma",
   "Green Star Foods",
+  "Hisun Pharma",
+  "Star Laboratories",
+  "Symans Pharma",
+  "Welwink Pharma",
+  "Weather Fold Pharmaceuticals",
+  "Qadir Pharma",
+  "Mega Pharma",
+  "GT Pharma",
 ] as const;
 
 export const reasons = [

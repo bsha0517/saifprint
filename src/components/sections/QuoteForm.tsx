@@ -141,7 +141,7 @@ export function QuoteForm() {
     <section id="quote" aria-labelledby="quote-title" className="relative bg-paper py-20 sm:py-24 lg:py-28">
       <div className="container-site grid gap-12 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">
         <div data-reveal className="lg:pt-2">
-          <p className="eyebrow">Request a Quote</p>
+          <p className="eyebrow">Request a Quotation</p>
           <h2
             id="quote-title"
             className="mt-4 text-3xl font-extrabold leading-[1.15] text-navy-900 sm:text-4xl lg:text-[2.75rem]"

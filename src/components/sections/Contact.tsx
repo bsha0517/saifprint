@@ -21,7 +21,7 @@ export function Contact() {
       <div className="container-site">
         <SectionHeading
           id="contact-title"
-          eyebrow="Contact"
+          eyebrow="Contact Al-Saif Print & Pack"
           title="Let's Talk About Your Next Print Project"
           intro="Reach our team by phone, WhatsApp or email. For a detailed quotation, the request form above is the quickest way to share your specifications."
         />

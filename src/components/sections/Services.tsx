@@ -16,7 +16,7 @@ export function Services() {
         <div className="flex flex-col justify-between gap-6 lg:flex-row lg:items-end">
           <SectionHeading
             id="services-title"
-            eyebrow="Our Services"
+            eyebrow="Our Printing & Packaging Services"
             title="Complete Printing & Packaging Solutions"
             intro="From everyday business essentials to specialised packaging, we provide printing solutions tailored to your requirements."
           />
@@ -116,7 +116,7 @@ export function Services() {
           className="relative mt-6 overflow-hidden rounded-2xl bg-navy-900 p-7 text-white sm:p-10"
         >
           <div aria-hidden="true" className="dot-grid-dark absolute inset-0" />
-          <div className="relative grid gap-8 lg:grid-cols-[1fr_1.2fr] lg:items-center">
+          <div className="relative grid gap-8 lg:grid-cols-[0.8fr_1.4fr] lg:items-center">
             <div>
               <span className="flex h-11 w-11 items-center justify-center rounded-xl bg-gold-500 text-navy-900">
                 <Icon name={finishing.icon} className="h-5 w-5" />
@@ -128,14 +128,12 @@ export function Services() {
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </QuoteLink>
             </div>
-            <ul className="grid grid-cols-2 gap-3 sm:grid-cols-3" aria-label="Finishing options">
+            <ul className="grid gap-3 sm:grid-cols-2 xl:grid-cols-3" aria-label="Finishing options">
               {finishingOptions.map((f) => (
-                <li
-                  key={f}
-                  className="rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3.5 text-[0.95rem] font-semibold"
-                >
+                <li key={f.title} className="rounded-xl border border-white/15 bg-white/[0.06] px-4 py-3.5">
                   <span aria-hidden="true" className="mb-2 block h-0.5 w-6 bg-gold-500" />
-                  {f}
+                  <h4 className="text-[0.95rem] font-semibold">{f.title}</h4>
+                  <p className="mt-1 text-sm leading-snug text-[#aeb4cf]">{f.description}</p>
                 </li>
               ))}
             </ul>
