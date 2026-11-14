@@ -66,3 +66,30 @@ The official logo (`AL-SAIF Print & Pack Logo.png`, added during the build) is u
 - Real assistive technology (NVDA/VoiceOver). Accessibility was checked with automated audits and keyboard tests only.
 - Safari and Firefox. Tests ran in Chromium only.
 - Performance on the eventual production host and domain.
+
+---
+
+## Update — 15 November 2026 (clients, finishing, images, production SEO)
+
+Commit `cd7cebf`, deployed to https://saifprint.vercel.app (Vercel production, project `saifprint`).
+
+- **Content:** 29 clients (8 added; no duplicates); Holography and Drip-Off added to Premium Print Finishing and to the quote form.
+- **Images:** the hero ("Finishing options" overlay) and Offset Printing card now use owner-supplied photos. The originals are small (554×554 and 640×480).
+- **Local checks:** typecheck, lint and unit tests (11/11) pass, and the production build passes.
+- **Browser tests:** 51/51 pass, both locally and against the live deployment.
+- **Responsive:** 320–1920 px shows no horizontal scroll, no broken images and no console errors.
+- **Lighthouse** (local, CDN-like server, 3 runs each):
+
+  | | Performance | Accessibility | Best Practices | SEO |
+  | --- | --- | --- | --- | --- |
+  | Desktop | 99–100 | 100 | 100 | 100 |
+  | Mobile | 87–93 | 100 | 100 | 100 |
+
+- **Live SEO output:**
+  - One title tag and the new description.
+  - Canonical, og:url and og:image all use `https://alsaifprintpack.pk/`.
+  - `noindex, nofollow`, and `robots.txt` disallows crawling, because the domain is not live.
+  - The sitemap lists `https://alsaifprintpack.pk/`.
+  - `X-Robots-Tag: noindex` is sent on `saifprint.vercel.app`.
+  - No stale domain references.
+- **Domain:** `alsaifprintpack.pk` returns NXDOMAIN (not delegated at PKNIC). The apex and www (308 → apex) are attached in Vercel; see the README go-live checklist for the DNS records.
